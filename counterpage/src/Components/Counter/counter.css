@@ -1,0 +1,47 @@
+.btn-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border: 1px solid white;
+  border-radius: 200px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.btn:last-child {
+  margin-right: 0;
+}
+
+.btn-up {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-down {
+  background-color: transparent;
+  color: white;
+  padding: 1px 20px;
+}
+
+.btn-retry {
+  background-color: transparent;
+  color: white;
+}
+
+.btn:hover {
+  border-color: yellow;
+}
+
+img {
+  width: 20px;
+}
+
+h1 {
+  font-size: 200px;
+  margin: 5%;
+}
