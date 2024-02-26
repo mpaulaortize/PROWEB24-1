@@ -1,0 +1,51 @@
+.footer-p {
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+  margin: 2% 0%;
+}
+
+.footer-information {
+  margin: 2% 20%;
+}
+
+.footer-link {
+  font-size: 12px;
+  color: rgb(49, 49, 49);
+  text-decoration: underline;
+  margin: 1%;
+}
+
+.line-footer {
+  border-top: 1px solid rgb(215, 215, 215);
+}
+
+.h3-footer {
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+  font-weight: 800;
+}
+
+.ul-footer {
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+}
+
+.footer-links {
+  font-size: 12px;
+  text-decoration: underline;
+  margin: 1%;
+}
+
+
+@media screen and (max-width: 734px) {
+  .footer-information {
+    margin: 2% 10%;
+  }
+}
+
+
+@media screen and (min-width: 734px) and (max-width: 1023px) {
+  .footer-information {
+    margin: 2% 10%;
+  }
+}

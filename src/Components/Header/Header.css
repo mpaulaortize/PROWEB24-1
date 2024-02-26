@@ -1,0 +1,164 @@
+/*General styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header nav.hidden {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  align-items: center;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.logo-img {
+  width: 30px;
+}
+
+.img-nav {
+  width: 20px;
+}
+
+#hamburguer-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.menu-nav-icon {
+  width: 30px;
+}
+
+header nav ul li:after {
+  content: "";
+  display: block;
+  margin-top: 0.6rem;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(30, 30, 30);
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+  #hamburguer-btn {
+    display: none;
+  }
+
+  header nav {
+    display: block !important;
+    position: relative;
+    width: auto;
+    height: unset;
+    top: unset;
+    left: unset;
+    background-color: transparent;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    font-size: 1rem;
+    margin-top: 0;
+    margin: 0 2rem;
+    width: auto;
+  }
+
+  header nav ul li:after {
+    display: none;
+  }
+
+  nav ul li a:hover {
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #hamburguer-btn {
+    display: none;
+  }
+
+  header nav {
+    display: block !important;
+    position: relative;
+    width: auto;
+    height: unset;
+    top: unset;
+    left: unset;
+    background-color: transparent;
+  }
+  header nav ul {
+    flex-direction: row;
+    font-size: 1rem;
+    margin-top: 0;
+    margin: 0 2rem;
+    width: auto;
+  }
+
+  header nav ul li:after {
+    display: none;
+  }
+
+  nav ul li a:hover {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .img-nav {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+    backdrop-filter: saturate(180%) blur(20px);
+
+    height: 720px;
+    font-size: 35px;
+  }
+
+  .nav-items a {
+    font-size: 25px;
+  }
+
+  header {
+    align-items: start;
+  }
+  nav ul li a:hover {
+    color: #fff;
+  }
+}
