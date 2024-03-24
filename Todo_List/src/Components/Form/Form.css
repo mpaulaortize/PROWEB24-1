@@ -1,65 +1,131 @@
-h3{
-    margin: 0 0 18px !important;
+/* Estilo de la tarjeta de tarea */
+.task-card-container {
+  background-color: #ff8a09;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  color: #1b1b1b;
+  font-size: 18px;
+  font-weight: 400;
+
+  padding: 12px 20px;
+  margin-top: 2%;
+  min-height: 56px;
+  min-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-form{
-    width: 300px;
+/* Card cuando la tarea esta completada */
+.task-card-container.completed {
+  background-color: rgba(255, 136, 9, 0.452);
 }
 
-.add-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 20px 0;
+.task-checkbox {
+  position: absolute;
+  opacity: 0;
 }
 
-input{
-    width: 230px;
-    height: 46px;
-    font-size: 18px;
-    background: none;
-    border-radius: 80px;
-    border: solid 2px white;
-    color: white;
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #212121;
+  border-radius: 50%;
 }
 
-input::placeholder{
-    color: white;
-    padding: 20px;
+.task-checkbox:checked + .checkmark {
+  background-color: #ff8a09;
+  border-color: #ff8a09;
 }
 
-button{
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-    background-color: transparent;
-    border: solid 2px white;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+/* Contenedor del checkbox */
+.checkbox-label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
-.task-card-container{
-    background-color: rgb(255, 138, 9);
-    color:#1B1B1B;
-    font-size: 18px;
-    font-weight: 400;
-    height: 56px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-    align-items: center;
+.task-name {
+  margin-left: 2%;
+  flex: 1;
 }
 
-.card-state{
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
+/* Botón de eliminar tarea */
+.button-delete {
+  background-color: transparent;
+  border: none;
+  color: #ff8a09;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.task-checkbox{
-    width: 30px;
+.filter-conunter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+/* Botón filtros*/
+.filter-button button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.add-container {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+input {
+  width: 77%;
+  height: 25px;
+  font-size: 18px;
+  background: none;
+  border-radius: 80px;
+  border: solid 1px white;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 5px;
+}
+
+.add-container button {
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ckecked-botton {
+  background-color: transparent;
+  border: none;
+  color: #ff5c5c;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.tittle {
+  display: flex;
+  justify-content: center;
+  color: #f0f0f0;
 }

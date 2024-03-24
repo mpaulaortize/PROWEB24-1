@@ -1,8 +1,8 @@
-import "./App.css";
-import { Form } from "./Components/Form/Form";
+import React from "react";
+import { Form } from "./Form/Form";
 
 function App() {
-  console.log("hi")
+  console.log("hi");
   return (
     <>
       <Form />
