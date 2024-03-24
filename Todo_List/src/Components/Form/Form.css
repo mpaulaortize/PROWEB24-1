@@ -1,0 +1,65 @@
+h3{
+    margin: 0 0 18px !important;
+}
+
+form{
+    width: 300px;
+}
+
+.add-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+
+input{
+    width: 230px;
+    height: 46px;
+    font-size: 18px;
+    background: none;
+    border-radius: 80px;
+    border: solid 2px white;
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+    padding: 20px;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.task-card-container{
+    background-color: rgb(255, 138, 9);
+    color:#1B1B1B;
+    font-size: 18px;
+    font-weight: 400;
+    height: 56px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.card-state{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.task-checkbox{
+    width: 30px;
+}
