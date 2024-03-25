@@ -85,6 +85,7 @@ export function Form() {
   const [taskName, setTaskName] = useState("");
   const [tasks, dispatch] = useReducer(taskReducer, []);
   const [filter, setFilter] = useState("all");
+  const [isInputEmpty, setIsInputEmpty] = useState(true);
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks"));
@@ -98,7 +99,9 @@ export function Form() {
   }, [tasks]);
 
   const handleInputChange = (event) => {
-    setTaskName(event.target.value);
+    const inputValue = event.target.value;
+    setTaskName(inputValue);
+    setIsInputEmpty(inputValue === "");
   };
 
   const addTask = (event) => {
@@ -106,6 +109,7 @@ export function Form() {
     if (taskName.trim() !== "") {
       dispatch({ type: "ADD_TASK", payload: taskName });
       setTaskName("");
+      setIsInputEmpty(true);
     }
   };
 
@@ -114,7 +118,7 @@ export function Form() {
   };
 
   const deleteTask = (index) => {
-    if (window.confirm("¿Estás seguro de que deseas eliminar esta tarea?")) {
+    if (window.confirm("Are you sure you want to delete this task?")) {
       dispatch({ type: "DELETE_TASK", payload: index });
     }
   };
@@ -123,14 +127,12 @@ export function Form() {
     event.preventDefault();
     if (tasks.some((task) => task.completed)) {
       if (
-        window.confirm(
-          "¿Estás seguro de que deseas eliminar todas las tareas completadas?"
-        )
+        window.confirm("Are you sure you want to delete all completed tasks?")
       ) {
         dispatch({ type: "DELETE_COMPLETED_TASKS" });
       }
     } else {
-      alert("No hay tareas completadas para eliminar.");
+      alert("No completed tasks to delete.");
     }
   };
 
@@ -149,7 +151,13 @@ export function Form() {
             value={taskName}
             onChange={handleInputChange}
           />
-          <Button addTask={addTask} />
+          <button
+            className={`add-button ${isInputEmpty ? "inactive" : "active"}`}
+            onClick={addTask}
+            disabled={isInputEmpty}
+          >
+            +
+          </button>
         </div>
         {tasks
           .filter((task) => {
